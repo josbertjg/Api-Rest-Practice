@@ -1,0 +1,203 @@
+@import "_paleta.scss";
+body{
+    width: 100%;
+    position: relative;
+    /* CAMBIOS GLOBALES */
+    #contentCollapse{
+        display:none;
+    }
+    table{
+        tr:hover{
+            cursor: pointer;
+        }
+        tbody{
+            & tr:first-child{
+                color: white;
+                background-color: $principal;
+                border: none !important;
+                & th{
+                    color: white !important;
+                }
+            }
+        }
+    }
+    #loading{
+        position: absolute;
+        display: none;
+        z-index: 10000;
+        top: 40%;
+        left: 45%;
+    }
+    .more{
+        cursor: pointer;
+        border: 2px purple solid;
+        width: 100%;
+        background-color: purple;
+        text-align: center;
+        transition: all 200ms;
+        & i{
+            color: purple;
+            padding: .5rem;
+            border-radius: 50%;
+            background-color: white;
+            transition: all 200ms;
+        }
+        &:hover{
+            background-color: transparent; 
+        }
+        &:hover i{
+            background-color: purple;
+            color: white;
+        }
+    }
+    .button{
+        padding: .5rem;
+        border-radius: 10px;
+        background-color: transparent;
+        border: 2px purple solid;
+        text-decoration: none;
+        color: purple;
+        transition: all 200ms;
+        &:hover{
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .activated{
+        background-color: purple;
+        color: white;
+        transition: all 200ms;
+        &:hover{
+            background-color: transparent;
+            color: purple;
+            cursor: pointer;
+        }
+    }
+    main{
+        display: flex;
+        width: 100% !important;
+        aside{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            background-color: $principal;
+            width: 260px;
+            color: white;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+            nav{
+                ul{
+                    list-style: none;
+                    margin: 0% !important;
+                    padding: 0% !important;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    li{
+                        padding: 0%;
+                    }
+                    a{
+                        display: block;
+                        font: {
+                            size: 1.2rem;
+                            weight: bold;
+                        }
+                        padding: .5rem 1rem;
+                        transition: all 200ms;
+                        &:hover{
+                            color: white;
+                            background-color: rgb(189, 1, 189);
+                        }
+                    }
+                }
+            }
+        }
+        & > div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            & header{
+                width: 100%;
+                background-color: $principal;
+                height: 10vh;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: white;
+                & div:last-of-type{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 5rem;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+            }
+            & #contenido{
+                padding: 2rem;
+                min-height: 85vh;
+                & #users-container{
+                    width: 100%;
+                    min-height: 80vh;
+                    display: flex;
+                    position: relative;
+                    padding-left: 2rem;
+                    & > div:first-of-type{
+                        width: 100%;
+                        min-height: 80vh;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        table{
+                            width: 60%;
+                            margin-bottom: 10vh;
+                        }
+                    }
+                    #collapse-container{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 20rem;
+                        min-width: 20rem;
+                        position: absolute;
+                        top: 7rem;
+                        right: 3rem;
+
+                        #btnCollapse{
+                            margin-bottom: 2rem;
+                        }
+
+                        & #contentCollapse{
+                            background-color: white;
+                            border: 1px rgb(197, 196, 196) solid;
+                            border-radius: 10px;
+                            padding: 1rem;
+                            min-width: 20rem;
+                            max-width: 20rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        height: 7vh;
+        width: 100%;
+        background-color: #333333;
+        position: fixed;
+        bottom: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+}

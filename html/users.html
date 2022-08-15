@@ -1,0 +1,42 @@
+<div id="users-container">
+    <div>
+        <h1>Users:</h1>
+        <table id="users-table" class="table table-bordered table-hover table-striped">
+            <tbody>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="collapse-container">
+        <a id="btnCollapse" class="button">
+            ¡Click to Interact!
+        </a>
+        
+        <div class="" id="contentCollapse">
+            <form class="mb-3" id="add-form">
+                <div class="mb-3">
+                    <span>¿What do you want?</span>
+                    <a href="#" id="add" class="button activated">Add</a>
+                    <a href="#" id="update" class="button">Update</a>
+                </div>
+                <b><span id="title">Add a New User:</span></b>
+                <input class="form-control mb-3" type="text" placeholder="First Name:" name="first_name">
+                <input class="form-control mb-3" type="text" placeholder="Last Name:" name="last_name">
+                <input class="form-control mb-3" type="text" placeholder="Email:" name="email">
+                <div id="msj-error"></div>
+                <input id="action" type="text" hidden value="add">
+                <input type="button" class="button activated" value="Submit" id="sendUser">
+            </form>
+        
+        
+                <a class="btn btn-danger" id="readme">
+                  <b>Read Me</b>
+                </a>
+        </div>
+    </div>
+</div>
